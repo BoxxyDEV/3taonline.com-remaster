@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/3tafavicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>3TA Online</title>
+    <!--Google fonts code-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header"> <!-- Using div instead of semantic tags because the PS3 does not support them -->
+        <a href="/">
+        <img src="/images/3ta_online_logo.png" alt="" height="70">
+        </a>
+    </div>
+    <div id="main">
+        <h1 id="mainh1"></h1>
+        <p id="subtext"></p>
+    </div>
+    <script>
+        var blespkg = "https://cdn.discordapp.com/attachments/1111481336578965644/1129933760238977205/3TA_Online_BLES01807_1.12_AIO.pkg";
+        var bluspkg = "https://cdn.discordapp.com/attachments/1111481336578965644/1129933759806976001/3TA_Online_BLUS31156_1.12_AIO.pkg";
+        var npebpkg = "https://cdn.discordapp.com/attachments/1111481336578965644/1129933759400116284/3TA_Online_NPEB01283_1.12_AIO.pkg";
+        var npubpkg = "https://cdn.discordapp.com/attachments/1111481336578965644/1129933760666808400/3TA_Online_NPUB31154_1.12_AIO.pkg";
+        var mainh1 = document.getElementById('mainh1');
+        var subtext = document.getElementById('subtext');
+        var path = document.location.pathname.toLowerCase();
+        if (path == "/bles" || path == "/bles/")
+        {
+            mainh1.innerText = "Taking you to the BLES version of AIO PKG";
+            if (navigator.platform != "PlayStation 3")
+            {
+                document.location = "https://mega.nz/folder/tUkmmBjA#oOxlTlUOiKK0Ne4HuSXk4w/folder/FctzBBKC";
+            }
+            else
+            {
+                document.location = "http://127.0.0.1/xmb.ps3/install.ps3?url=" + encodeURIComponent(blespkg);
+            }
+            
+        }
+        else if (path == "/blus" || path == "/blus/") 
+        {
+            mainh1.innerText = "Taking you to the BLUS version of AIO PKG";
+            if (navigator.platform != "PlayStation 3")
+            {
+                document.location = "https://mega.nz/folder/tUkmmBjA#oOxlTlUOiKK0Ne4HuSXk4w/folder/4FsRjLiY";
+            }
+            else
+            {
+                document.location = "http://127.0.0.1/xmb.ps3/install.ps3?url=" + encodeURIComponent(bluspkg);
+            }
+            
+        }
+        else if (path == "/npeb" || path == "/npeb/")
+        {
+            mainh1.innerText = "Taking you to the NPEB version of AIO PKG";
+            if (navigator.platform != "PlayStation 3")
+            {
+                document.location = "https://mega.nz/folder/tUkmmBjA#oOxlTlUOiKK0Ne4HuSXk4w/folder/BFk1VJTR";
+            }
+            else
+            {
+                document.location = "http://127.0.0.1/xmb.ps3/install.ps3?url=" + encodeURIComponent(npebpkg);
+            }
+        }
+        else if (path == "/npub" || path == "/npub/")
+        {
+            mainh1.innerText = "Taking you to the NPUB version of AIO PKG";
+            if (navigator.platform != "PlayStation 3")
+            {
+                document.location = "https://mega.nz/folder/tUkmmBjA#oOxlTlUOiKK0Ne4HuSXk4w/folder/9d130D6Z";
+            }
+            else
+            {
+                document.location = "http://127.0.0.1/xmb.ps3/install.ps3?url=" + encodeURIComponent(npubpkg);
+            }
+        }
+        else if (path == "/discord" || path == "/discord/")
+        {
+            mainh1.innerText = "Sending you to our Discord";
+            document.location = "https://discord.gg/nKGFm5DkdZ";
+        }
+        else if (path == "/lts" || path == "/lts/")
+        {
+            mainh1.innerText = "LTS is cool try LTS today. RLZ is epic";
+            document.location = "https://lastteamstanding.uk/";
+        }
+        else if (path == "/lts/jirex" || path == "/lts/jirex/")
+        {
+            mainh1.innerText = "LTS is cool try LTS today. RLZ is epic";
+            document.location = "https://buy.lastteamstanding.uk/gta5sprx-JIREX";
+        }
+        else 
+        {
+            var randomnum = Math.floor(Math.random() * 10);
+            document.title = "404 | 3TA Online";
+            if (randomnum == 0)
+            {
+                randomnum = 1;
+            }
+
+            if (randomnum == 1)
+            {
+                mainh1.innerText = "oops sorry i dont know how you got here";
+            }
+            if (randomnum == 2)
+            {
+                mainh1.innerText = "how'd you get here you silly goose";
+            }
+            if (randomnum == 3)
+            {
+                mainh1.innerText = "G'day mate you have stumbled while drinking too much VB at the local bunnings";
+            }
+            if (randomnum == 4)
+            {
+                mainh1.innerText = "you're lost asf";
+            }
+            if (randomnum == 5)
+            {
+                mainh1.innerText = "404";
+            }
+            if (randomnum == 6)
+            {
+                mainh1.innerText = "There are no cougars in missions!!";
+                subtext.innerHTML = "<i>darkviperau</i>";
+            }
+            if (randomnum == 7)
+            {
+                mainh1.innerHTML = "AAARGH, This Music's All Wrong!";
+                subtext.innerHTML = "<i>Trevor Philips - GTA V</i>";
+            }
+            if (randomnum == 8)
+            {
+                mainh1.innerHTML = "Got a go down to the local cashies to go get myself some Grand Theft Auto V on the PlayStation 3";
+            }
+            if (randomnum == 9)
+            {
+                mainh1.innerHTML = "I'll Swing By And Sign The Contracts, Alright? Just Ignore The Bodies!";
+                subtext.innerHTML = "<i>Trevor Phillips from GTA V</i>";
+            }
+        }
+
+
+    </script>
+</body>
+</html>
