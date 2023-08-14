@@ -17,6 +17,7 @@
         <a href="/">
         <img src="/images/3ta_online_logo.png" alt="" height="70">
         </a>
+        <a href="/news/" class="headerhyperlinks">News</a>
     </div>
     <div id="hero-image">
         <h1 id="herotext">3TA Online</h1>
@@ -117,6 +118,7 @@
         var usingdiscordcdn = document.getElementById("usingdiscordcdn");
         var ps3link = document.getElementById("ps3link");
         var pcinstructionstitle = document.getElementById('pcinstructionstitle');
+        var hyperlinksheader = document.getElementById("hyperlinksheader");
         const ps3req = new XMLHttpRequest();
         var blespkg = "https://cdn.discordapp.com/attachments/1111481336578965644/1137913412073046046/3TA_Online_BLES.pkg";
         var bluspkg = "https://cdn.discordapp.com/attachments/1111481336578965644/1137913411691360306/3TA_Online_BLUS.pkg";
@@ -124,7 +126,6 @@
         var npubpkg = "https://cdn.discordapp.com/attachments/1111481336578965644/1137913670286987295/3TA_Online_NPUB.pkg";
 
         var isWebman = true; // i am assuming but most likely and if fails will start using old fasion alert()
-
         function startonfail()
         {
             if (ps3req.status == 0) 
