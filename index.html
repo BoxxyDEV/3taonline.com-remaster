@@ -61,6 +61,7 @@
                 <a href="https://mega.nz/folder/tUkmmBjA#oOxlTlUOiKK0Ne4HuSXk4w/file/wc1BEIqK" class="btnhyperlinks">NPEB01283</a>
                 <a href="https://mega.nz/folder/tUkmmBjA#oOxlTlUOiKK0Ne4HuSXk4w/file/NFln3SjT" class="btnhyperlinks">NPUB31154</a>
             </div>
+            <!--
             <div id="ps3link">
                 <div id="webman">
                     <h3>Auto-Installer (NEED WEBMAN)</h3>
@@ -83,6 +84,7 @@
                     </div>
                 </div>
             </div>
+            -->
         </section>
         <div id="socials">
             <h3>3TA Online on Social Media</h3>
@@ -116,9 +118,9 @@
         var webman = document.getElementById("webman");
         var webmanlinks = document.getElementById("webmanlinks"); // webman links not using so prob should just delete
         var pcinstructions = document.getElementById("pcinstructions");
-        var ps3install = document.getElementById("ps3install");
+        //var ps3install = document.getElementById("ps3install");
         var usingdiscordcdn = document.getElementById("usingdiscordcdn");
-        var ps3link = document.getElementById("ps3link");
+        //var ps3link = document.getElementById("ps3link");
         var pcinstructionstitle = document.getElementById('pcinstructionstitle');
         var hyperlinksheader = document.getElementById("hyperlinksheader");
         const ps3req = new XMLHttpRequest();
@@ -134,7 +136,7 @@
             {
                 isWebman = false;
                 alert("Welcome to 3TAOnline\nCredits:\nOwner: Parker\nSite: Boxuga\nPKG: JIREX");
-                usingdiscordcdn.innerHTML = 'You do not have webman installed. Please install it at from Brewology to continue with the auto-installer. Otherwise, proceed with the manual install below :)'; 
+                //usingdiscordcdn.innerHTML = 'You do not have webman installed. Please install it at from Brewology to continue with the auto-installer. Otherwise, proceed with the manual install below :)'; 
                 //webman.parentElement.removeChild(webman);
             }
             else
@@ -168,15 +170,15 @@
         {
             megalinks.parentElement.removeChild(megalinks);
             socialmedia.parentElement.removeChild(socialmedia);
-            PS3Notify("127.0.0.1", "Welcome to 3TAOnline\nCredits:\nOwner: Parker\nSite: Boxuga\nPKG: JIREX", "12");
+            PS3Notify("127.0.0.1", "Welcome to 3TAOnline\nCredits:\nOwner: Parker\nSite: Boxuga\nPKG: JIREX\nThe Auto-Installer is currently unavaliable for use. if you would like to try 3TA go on a different device and download using the mega link.", "12");
             setTimeout(startonfail, 1000); // webman detection idk how i found this seemed to work seeing as the PS3 uses such an old version of javascript
             pcinstructions.parentElement.removeChild(pcinstructions);
             pcinstructionstitle.parentElement.removeChild(pcinstructionstitle);
         }
         else
         {
-            ps3install.hidden = true;
-            ps3link.hidden = true;
+            //ps3install.hidden = true;
+            //ps3link.hidden = true;
             isWebman = false;
         }
     </script>
